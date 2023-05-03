@@ -34,8 +34,6 @@ void Enemy::Init() {
 
 // Render Calss
 void Render::DrawMap() {
-	HANDLE h_console = GetStdHandle(STD_OUTPUT_HANDLE);
-
 	for (int i = 0; i < MAP_SIZE; i++) {
 		for (int j = 0; j < MAP_SIZE; j++) {
 			switch (map_class.map[i][j])

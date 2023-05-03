@@ -3,7 +3,6 @@
 #include <iostream>
 #include <queue>
 #include <Windows.h>
-#include <iostream>
 
 #define MAP_SIZE 15
 
@@ -72,7 +71,6 @@ public:
 };
 
 class GameManager {
-
 public:
 	GameManager();
 };
