@@ -4,34 +4,51 @@
 #include <string.h> 
 #include <malloc.h>
 
-#define ENTER 13
-
 int main() {
-	char* i_data = (char*)malloc(32);
-	gets(i_data);
+	char a;
 
-	//printf("%c", i_data[1]);
-	my_Scanf("%c", &i_data);
-	printf("%c", i_data);
-
-	free(i_data);
+	MyScanf("%d", &a);
 
 	return 0;
 }
 
-int my_Scanf(char* text, void* ap_data) {
+int MyScanf(const char* output_type, void* ap_data) {
+	//char* input_data = (char*)malloc(32);
+	char input_data[5] = { ' ' }; // 동적배열 필요
+
+	// Enter를 입력하기 전까지 문자를 계속 받아옴
+	do gets(input_data);
+	while (input_data == '\0');
+
 	// '%'가 있는 지 없는 지 검사
-	while (*text != '%' && *text) text++;
+	while (*output_type != '%' && *output_type) output_type++;
 
 	// 만약 '%'가 있다면?
-	if (*text++ == '%')
+	if (*output_type++ == '%')
 	{
-		if (*text == 'd') { printf("%%d 입니다"); }
-		if (*text == 'f') printf("%%f 입니다.");
-		if (*text == 'c') { printf("%%c 입니다."); }
-		if (*text == 's') printf("%%s 입니다.");
-		if (*text == 't') printf("%%t 입니다.");
+		switch (*output_type)
+		{
+		case 'd':
+			printf("%%d 입니다");
+			break;
+		case 'f':
+			printf("%%f 입니다");
+			break;
+		case 'c':
+			printf("%%c 입니다");
+			break;
+		case 's':
+			printf("%%s 입니다");
+			break;
+		case 't':
+			printf("%%t 입니다");
+			break;
+		}
 	}
-
 	return -1;
+}
+
+char Percent_D() {
+
+	return ' ';
 }
