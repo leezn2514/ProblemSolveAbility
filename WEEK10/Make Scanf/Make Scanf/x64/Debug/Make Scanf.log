@@ -1,5 +1,0 @@
-﻿  Main.c
-C:\Users\PC\Desktop\WEEK10\Make Scanf\Make Scanf\Main.c(13,2): warning C4013: 'MyScanf'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\PC\Desktop\WEEK10\Make Scanf\Make Scanf\Main.c(26,5): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\PC\Desktop\WEEK10\Make Scanf\Make Scanf\Main.c(38,23): warning C4013: 'atoi'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  Make Scanf.vcxproj -> C:\Users\PC\Desktop\WEEK10\Make Scanf\x64\Debug\Make Scanf.exe

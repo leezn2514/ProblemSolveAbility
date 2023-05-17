@@ -1,0 +1,4 @@
+﻿  Main.c
+D:\202127050 이아현\3학년 1학기\문제해결능력응용\ProblemSolveAbility\WEEK10\Make DB\Make DB\Main.c(48,5): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\202127050 이아현\3학년 1학기\문제해결능력응용\ProblemSolveAbility\WEEK10\Make DB\Make DB\Main.c(60,21): warning C4013: 'atoi'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  Make DB.vcxproj -> D:\202127050 이아현\3학년 1학기\문제해결능력응용\ProblemSolveAbility\WEEK10\Make DB\x64\Debug\Make DB.exe

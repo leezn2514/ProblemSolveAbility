@@ -1,11 +1,24 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define MAX_LEN 100
 
 #include <stdio.h>
 #include <string.h> 
 #include <malloc.h>
 
 int main() {
-	int d = 0;
+	FILE* fs;
+	fs = fopen("Data.txt", "r");
+
+	// 파일 포인터(txt의 끝) 검사
+	while (feof(fs) == 0) { 
+		char str[MAX_LEN];
+		fgets(str, MAX_LEN, fs);
+		printf("%s	", str);
+	}
+	fclose(fs);
+
+
+	/*int d = 0;
 	char c = ' ';
 	char s[10] = " ";
 	float f = 0;
@@ -14,10 +27,12 @@ int main() {
 	MyScanf("%d", &d);
 	MyScanf("%c", &c);
 
-	printf("내 이름은 %s이고 이번학기 점수는 %d점이고 성적은 %c를 받았습니다", s, d, c);
+	printf("내 이름은 %s이고 이번학기 점수는 %d점이고 성적은 %c를 받았습니다", s, d, c);*/
 
 	return 0;
 }
+
+
 
 int MyScanf(const char* output_type, void* ap_data) {
 	char* buffer = (char*)malloc(32);
@@ -35,13 +50,13 @@ int MyScanf(const char* output_type, void* ap_data) {
 		switch (*output_type)
 		{
 		case 'd':
-			 *(int *)ap_data = atoi(buffer);
+			*(int*)ap_data = atoi(buffer);
 			break;
 		case 'f':
 			//*(float*)ap_data = atof(buffer);
 			break;
 		case 'c':
-			*(char *)ap_data = buffer[0];
+			*(char*)ap_data = buffer[0];
 			break;
 		case 's':
 			strcpy(ap_data, buffer);
